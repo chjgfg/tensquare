@@ -1,0 +1,21 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: tensquare-search
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tensquare_article?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    username: root
+    password: 123456
+
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+      cluster-name: my-es
+
+mybatis-plus:
+  #  type-aliases-package: org.vector.domain
+  configuration:
+    map-underscore-to-camel-case: false # 关闭驼峰命名
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis-plus配置控制台打印完整带参数SQL语句

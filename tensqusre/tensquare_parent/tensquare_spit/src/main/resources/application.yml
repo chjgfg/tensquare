@@ -1,0 +1,13 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: tensquare-spit     #项目的名称,可写可不写
+  data:
+    mongodb:
+      host: localhost     #mongodb所在的那个主机
+      port: 27017            #开放的端口
+      database: spitdb        #数据库名
+  redis:
+    host: 192.168.0.103
+    password: 123456

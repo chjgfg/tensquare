@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/tensquare_parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_article" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_friend" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_gathering" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_manager_zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_qa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_recruit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_spit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tensquare_parent/tensquare_web_zuul" charset="UTF-8" />
+  </component>
+</project>

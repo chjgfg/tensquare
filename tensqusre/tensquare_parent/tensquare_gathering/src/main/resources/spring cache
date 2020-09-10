@@ -1,0 +1,6 @@
+使用spring cache
+  1.在启动类上添加 @EnableCaching 注解,就是要使用springboot的缓存
+  2.在要存入缓存的service中的某一个方法上加上 @Cacheable 注解,就可以存入缓存中了
+    	@Cacheable(value = "gathering",key = "#id")// value没用处,就是这个缓存在spring cache中的全局名称可以随便写,key就是这个存进去的id(#id,就可以拿到方法中的参数)
+  3.在要删除缓存的service中的某一个方法上加上 @Cacheable 注解,就可以删除缓存了
+      @CacheEvict(value = "gathering",key = "#gathering.id")

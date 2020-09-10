@@ -1,0 +1,24 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: tensquare-sms
+  rabbitmq:
+    addresses: 127.0.0.1 #只能是这个,换成了192.168.0.103就会一直报错
+    #账号密码必须写
+    password: guest
+    username: guest
+    #端口是这个
+    port: 5672
+aliyun:
+  sms:
+    accessKeyId: LTAI4GHpF2hrQNPHaExTTnEk
+    accessKeySecret: hQOQm1yj3nyOi0nlE6I3c84XeBkerr
+    #自定义的模板名称,就是阿里云的文本短信的那个模板管理的模版CODE
+    template_code: SMS_201650774
+    #自定义的签名名称,就是阿里云的文本短信的那个签名管理的签名名称
+    sign_name: 个人学习网站
+
+
+
+

@@ -1,0 +1,37 @@
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.1.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-dependencies</artifactId>
+          <version>Finchley.SR2</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+
+  <modules>
+    <module>tensquare_article</module>
+    <module>tensquare_base</module>
+    <module>tensquare_common</module>
+    <module>tensquare_eureka</module>
+    <module>tensquare_gathering</module>
+    <module>tensquare_qa</module>
+    <module>tensquare_rabbitmq</module>
+    <module>tensquare_recruit</module>
+    <module>tensquare_search</module>
+    <module>tensquare_sms</module>
+    <module>tensquare_spit</module>
+    <module>tensquare_user</module>
+    <module>tensquare_friend</module>
+  </modules>
+ 实体类没有无参构造就会报错
+ Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `entity.Result` (no Creators, like default construct, exist): cannot deserialize from Object value (no delegate- or property-based Creator)

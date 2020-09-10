@@ -1,0 +1,36 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: tensquare-manager-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10001/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    tensquare-base: #要拦截的那个微服务
+      path: /base/** #拦截的路径
+      serviceId: tensquare-base #拦截后要跳转的路径
+    tensquare-gathering: #要拦截的那个微服务
+      path: /gathering/** #拦截的路径
+      serviceId: tensquare-gathering #拦截后要跳转的路径
+    tensquare-qa: #要拦截的那个微服务
+      path: /qa/** #拦截的路径
+      serviceId: tensquare-qa #拦截后要跳转的路径
+    tensquare-article: #要拦截的那个微服务
+      path: /article/** #拦截的路径
+      serviceId: tensquare-article #拦截后要跳转的路径
+    tensquare-user: #要拦截的那个微服务
+      path: /user/** #拦截的路径
+      serviceId: tensquare-user #拦截后要跳转的路径
+    tensquare-friend: #要拦截的那个微服务
+      path: /friend/** #拦截的路径
+      serviceId: tensquare-friend #拦截后要跳转的路径
+  sensitive-headers:
+    - Cookie,Set-Cookie,Authorization
+jwt:
+  config:
+    key: itcast

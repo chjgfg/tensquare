@@ -1,0 +1,17 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: tensquare-rabbitmq
+  rabbitmq:
+    addresses: 127.0.0.1 #只能是这个,换成了192.168.0.103就会一直报错
+    #账号密码必须写
+    password: guest
+    username: guest
+    #端口是这个
+    port: 5672
+
+
+
+
+

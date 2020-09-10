@@ -1,0 +1,29 @@
+server: 
+  port: 9011
+spring: 
+  application:  
+    name: tensquare-friend #指定服务名
+  datasource:  
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tensquare_friend?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+    database: mysql
+    open-in-view: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10001/eureka/
+jwt:
+  config:
+    key: itcast
+feign:
+  hystrix:
+    enabled: true

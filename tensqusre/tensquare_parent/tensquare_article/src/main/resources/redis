@@ -1,0 +1,13 @@
+使用Redis
+  1.在pom中添加依赖
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+  2.在appliacton.yml中写Redis的host和password
+  3.在用到Redis的service类中注入RedisTemplate
+  4.在要加入缓存的service一个方法中写上
+    redisTemplate.opsForValue().get("article_" + id);从缓存中通过 article_id 获取
+    redisTemplate.opsForValue().set("article_" + id,article,10, TimeUnit.SECONDS);加入到缓存中,key=article_id,value=article,outTime=10,单位=TimeUnit.SECONDS
+  5.在要删除缓存的service的一个方法中写上
+    redisTemplate.delete("article_"+id);从缓存中通过 article_id 删除

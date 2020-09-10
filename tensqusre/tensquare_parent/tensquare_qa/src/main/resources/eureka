@@ -1,0 +1,33 @@
+注册中心
+1.先导包
+  <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+  </dependency>
+2.修改配置文件
+  eureka:
+    instance:
+      prefer-ip-address: true #远程调用
+    client:
+      service-url:
+        defaultZone: http://127.0.0.1:10001/eureka/
+3.修改启动类
+  添加@EnableEurekaClient
+
+
+远程调用
+1.导包
+   <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-openfeign</artifactId>
+   </dependency>
+2.添加要调用的类的接口
+  @FeignClient("tensquare-base")
+  public interface BaseClient {
+  }
+3.修改启动类
+  @EnableFeignClients
+  @EnableDiscoveryClient //发现微服务
+
+
+

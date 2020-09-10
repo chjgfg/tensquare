@@ -1,0 +1,17 @@
+1.先导包
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+      </dependency>
+2.再写配置文件(用feign的时候就不用添加配置)
+  feign:
+    hystrix:
+      enabled: true
+3.用feign时在启动类上添加注解
+   @EnableFeignClients(basePackages = {"com.tensquare.friend.client"})
+   @EnableDiscoveryClient
+4.在远程的接口上添加注解
+    @FeignClient
+5.用hystrix时在要远程的那个接口上用注解
+  @FeignClient(value = "tensquare-user",fallback = UserClientImpl.class)//feign自带的hystrix
+6.写远程接口的实现类,然后直接写一个返回数据就行
