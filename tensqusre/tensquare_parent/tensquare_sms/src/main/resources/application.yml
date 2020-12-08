@@ -12,10 +12,10 @@ spring:
     port: 5672
 aliyun:
   sms:
-    accessKeyId: LTAI4GHpF2hrQNPHaExTTnEk
-    accessKeySecret: hQOQm1yj3nyOi0nlE6I3c84XeBkerr
+    accessKeyId: ***
+    accessKeySecret:***
     #自定义的模板名称,就是阿里云的文本短信的那个模板管理的模版CODE
-    template_code: SMS_201650774
+    template_code: ***
     #自定义的签名名称,就是阿里云的文本短信的那个签名管理的签名名称
     sign_name: 个人学习网站
 
